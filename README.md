@@ -1,10 +1,10 @@
-# Clip & Concat: Efficient Token Pruning For Vision Transformer With Spatial Information Preserved 
+# Prune and Merge: Efficient Token Compression For Vision Transformer With Spatial Information Preserved 
 
-This repository contains PyTorch evaluation code, pruning code, finetuning code and pruned models of our our method for DeiT:
+This repository contains PyTorch evaluation code, pruning code, finetuning code, and pruned models of our method for DeiT:
  
 The framework of our Prune and Merge:
 
-![cc-vit](.github/framework2.0.png)
+![pm-vit](fig/framework2.0.png)
 
 # Model Zoo
 
@@ -29,12 +29,12 @@ git clone https://github.com/wafev/prune_and_merge.git
 Then, create the conda environment and install PyTorch 1.10.1+ and torchvision 0.11.2+ and [pytorch-image-models 0.3.2](https://github.com/rwightman/pytorch-image-models):
 
 ```
-conda create --n ccvit python==3.7
+conda create --n pmvit python==3.7
 conda install pytorch==1.10.1 torchvision==0.11.2 -c pytorch
 pip install timm==0.3.2
 ```
 
-## Data preparation
+## Data Preparation
 
 Download and extract ImageNet train and val images from http://image-net.org/.
 The directory structure is the standard layout for the torchvision [`datasets.ImageFolder`](https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder), and the training and validation data is expected to be in the `train/` folder and `val` folder respectively:
